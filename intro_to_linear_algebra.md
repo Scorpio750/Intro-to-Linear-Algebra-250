@@ -6,14 +6,19 @@
 ## Table of Contents
 
 1. [Matrices and Vectors](#anchor1.1)
-	- [Linear Combinations](#anchor1.2)
+	1. [Linear Combinations](#anchor1.2)
 	- [Gaussian Elimination](#anchor1.4)
 		- [Rank and Nullity](#anchor1.41)
 	- [Linear Independence](#anchor1.7)
 2. [Invertibility](#anchor2.3)
 	- [Inverses](#anchor2.4)
 3. [Determinants]($anchor3.1)
-	- 
+4. [Subspaces](#anchor4.1)
+	- [Bases](#anchor4.2)
+5. [Eigen-things](#anchor5)
+	1. [Characterstic Polynomial](#anchor5.2)
+	- [Diagonalization of Matrices](#anchor5.3)
+6. [Orthogonality](#anchor6)
 
 
 
@@ -642,10 +647,10 @@ I^2 & \mid & 0 \\\
 
 ### 3/12/12
 
-## $$$\S$$$ 3.1 - Determinants
+## $$$\S$$$ 3.1 - [Determinants](id:anchor3.1)
 
 \\[\begin{align}
-&\det\;(A) = a\_{11}c\_{11} + a\_{12}c\_{12} +\dotso + a\_{1n}c\_{1n} \\\
+&\det(A) = a\_{11}c\_{11} + a\_{12}c\_{12} +\dotso + a\_{1n}c\_{1n} \\\
 &\text{where } c\_{ij} = (-1)^{i+j}\,\det\,(A\_{ij}) \\\
 \end{align}\\]
 
@@ -657,7 +662,7 @@ If $$$\det(A)\neq 0,\; A$$$ is invertible.
 
 ##### Notation:
 
-$$\det (A) = |A|$$
+$$\det(A) = \mid A\mid$$
 
 
 So let's consider $$$\\{\mathbf u, \mathbf v\\} \leq \mathbb R^2$$$ that are linearly independent.
@@ -686,9 +691,9 @@ $$\det B\text{ along row } i = \sum\_{l=1}^n b\_{il}c\_{il} = \sum\_{l=1}^n ka\_
 Let $$$A,B$$$ be $$$n\times n$$$ matrices. Then,
 
 1. $$$\exists \,A^{-1} \iff \det(A)\neq 0$$$
-2. $$$\det(AB) = \det{det}(A)\det(B)$$$
+2. $$$\det(AB) = \det(A)\det(B)$$$
 3. $$$\det(A^T)=\det(A)$$$
-4. $$$\exists \,A^{-1} \implies \det(A^{-1} = {1\over \det(A)}$$$
+4. $$$\exists \,A^{-1} \implies \det(A^{-1}) = {1\over \det(A)}$$$
 
 $$$A$$$ is invertible iff $$$A=E_1E_2E_3\dotso E_k$$$
 \\[\begin{align}
@@ -716,7 +721,7 @@ Let $$$A$$$ be an invertible $$$n\times n$$$ matrix, $$$\mathbf b\in \mathbb R^n
 ---
 
 ### 7/25/14
-## $$$\S$$$ 4.1 - Subspaces
+## $$$\S$$$ 4.1 - [Subspaces](id:anchor6.1)
 
 Suppose $$$\mathbf u, \mathbf v$$$ satisfy the homogeneous equation.
 - The set of solutions to $$$A\mathbf x = \mathbf 0$$$ is *closed* under vector addition, scalar multiplication, and contains $$$\mathbf 0$$$.
@@ -755,7 +760,7 @@ Suppose $$$\mathbf u, \mathbf v$$$ satisfy the homogeneous equation.
 \end{align}\\]
 which essentially is the set of all possible linear combinations of the column vectors of $$$A$$$.
 
-## $$$\S$$$ 4.2 - Bases
+## $$$\S$$$ 4.2 - [Bases](id:anchor4.2)
 
 **Definition:** Let $$$V\subseteq \mathbb R^n$$$ be a non-zero subspace. A **basis** is a linearly independent generating set.
 - $$$\\{\mathbf e_j\\}$$$ (the standard vectors) form a basis for $$$\mathbb R^n$$$.
@@ -795,7 +800,7 @@ Let $$$V\subseteq \mathbb R^n $$$ be a nonzero subspace. then any two bases have
 
 **Definition:** The **dimension** of a subspace is the size of one of its bases.
 
-## $$$\S$$$ 4.3
+## $$$\S$$$ 4.3 - Dimension
 
 - Col(A) is a subspace. What is its dimension?
 	- rank(A).
@@ -816,7 +821,7 @@ $$W\subseteq V\subseteq \mathbb R^n$$
 --- 
 
 ### 7/28/14
-## $$$\S$$$ 5.1 - Eigen-things
+## $$$\S$$$ 5.1 - [Eigen-things](id:anchor5)
 
 **Definition:** Let $$$A$$$ be an $$$n\times n$$$ matrix, $$$\lambda$$$ be some *nonzero* scalar, $$$\mathbf v$$$ be some *nonzero* vector in $$$\mathbb R^n$$$. If $$$A\mathbf v = \lambda\mathbf v$$$, we call $$$\lambda$$$ and $$$\mathbf v$$$ an **eigenvalue, eigenvector** pair.
 
@@ -832,7 +837,7 @@ A basis for the 3-eigenspace is $$$\left\\{\,\begin{bmatrix} 1 \\\ 0 \\\ 0 \\\ \
 
 **Definition:** The subspace of vectors assoc. with the solution $$$(A-\lambda I)\mathbf v = \mathbf 0$$$ is called the **$$$\lambda$$$-eigenspace**.
 
-## $$$\S$$$ 5.2 - Characteristic Polynomial
+## $$$\S$$$ 5.2 - [Characteristic Polynomial](id:anchor5.2)
 
 - Consider $$$\det (A-\lambda I)=0$$$ for some $$$n\times n$$$ matrix $$$A$$$ and nonzero scalar $$$\lambda$$$.
 	- The eigenvalues of $$$A$$$ are precisely those that satifsy the above equation.
@@ -859,7 +864,7 @@ A - \lambda I \;&= \begin{bmatrix} -4-\lambda & -3 \\\ 3 & 6-\lambda \end{bmatri
 ---
 
 ### 7/30/14
-## $$$\S$$$ 5.3 - Diagonalization of Matrices
+## $$$\S$$$ 5.3 - [Diagonalization of Matrices](id:anchor5.3)
 
 #### Thm 5.2
 
