@@ -1,0 +1,1618 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+
+</style>
+<title>Intro to Linear Algebra</title>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['$$$','$$$']]}});</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<h1>Intro to Linear Algebra</h1>
+
+<h2>Justin Lynd / Richard Voepel</h2>
+
+<h2>Spring / Summer 2014</h2>
+
+<hr />
+
+<h2>Table of Contents</h2>
+
+<ol>
+<li><a href="#anchor1.1">Matrices and Vectors</a>
+
+<ol>
+<li><a href="#anchor1.2">Linear Combinations</a></li>
+<li><a href="#anchor1.4">Gaussian Elimination</a>
+
+<ul>
+<li><a href="#anchor1.41">Rank and Nullity</a></li>
+</ul>
+</li>
+<li><a href="#anchor1.7">Linear Independence</a></li>
+</ol>
+</li>
+<li><a href="#anchor2.3">Invertibility</a>
+
+<ul>
+<li><a href="#anchor2.4">Inverses</a></li>
+</ul>
+</li>
+<li><a href="$anchor3.1">Determinants</a></li>
+<li><a href="#anchor4.1">Subspaces</a>
+
+<ul>
+<li><a href="#anchor4.2">Bases</a></li>
+</ul>
+</li>
+<li><a href="#anchor5">Eigen-things</a>
+
+<ol>
+<li><a href="#anchor5.2">Characterstic Polynomial</a></li>
+<li><a href="#anchor5.3">Diagonalization of Matrices</a></li>
+</ol>
+</li>
+<li><a href="#anchor6">Orthogonality</a></li>
+</ol>
+
+
+<hr />
+
+<h3>1/22/14</h3>
+
+<h4>Concrete</h4>
+
+<ul>
+<li>Study of solutions of/how to solve systems of linear equations (Sect. 1.1, 2.6, 3)</li>
+</ul>
+
+
+<h4>Abstract</h4>
+
+<ul>
+<li>(Sect. 4 &amp; 5)</li>
+</ul>
+
+
+<h4>Usefulness</h4>
+
+<ul>
+<li>Can be used to "linearize" mathematical objects to make it easier to predict behavior</li>
+<li><p>Ex:
+  \[\begin{aligned}
+   x-y &amp;=3 \\
+   2x+3y &amp;=1 \\
+  \end{aligned} \]</p></li>
+<li><p>Can be solved with either substitution or elimination</p></li>
+<li><strong>3-dimensions</strong>:
+  \[\begin{aligned}
+  x+2y-z &amp;=1 \\
+  2x+y+z &amp;=0 \\
+  \end{aligned} \]</li>
+<li><strong>5-dimensions</strong>
+  $$2x_1 + 3x_2 - x_3 + x_4 - x_5$$</li>
+</ul>
+
+
+<h4>From Systems of Equations to Matrices and Vectors</h4>
+
+<p>Ex:
+    \[\begin{aligned}
+    &amp;2x_1 + x_2 + x_3 &amp;= 1 \\
+    &amp;4x_1 + x_2  &amp;= -2 \\
+    -&amp;2x_1 + 2x_2 + x_3 &amp;= 7 \\
+    \end{aligned} \]</p>
+
+<p>Unknowns:
+    $$\vec{x} =
+    \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ \end{bmatrix}$$</p>
+
+<h4>Dot Product of two vectors</h4>
+
+<p>$$\vec{u} \bullet \vec{v} = \begin{bmatrix} u_1 \end{bmatrix}$$</p>
+
+<h5>Definition:</h5>
+
+<p>Given an <em>m x n</em> matrix $$$A =[\vec a_1 \dots \vec a_n]$$$
+ and a <em>n x 1</em> vector $$$\vec{x} = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}$$$ the {matrix $$$\bullet$$$ vector} product is the sum scalar
+ $$ x_1\vec a_1 = x_2\vec a_2 +\dotso+x_n\vec a_n$$</p>
+
+<hr />
+
+<h2>Text. Sect. 1.1</h2>
+
+<h3><span id="anchor1.1">Matrices and Vectors</span></h3>
+
+<h4>Definition:</h4>
+
+<p>A <strong>matrix</strong> is a rectangular array of scalars. If the matrix has <em>m</em> rows and <em>n</em> columns, we say that the <em>size</em> of the matrix is <strong>m by n</strong>, written <em>m x n</em>. The matrix is <strong>square</strong> if $$$m = n$$$. The scalar in the <em>ith</em> row and <em>jth</em> column is called the $$$(i,j)\mathrm{-entry}$$$ of the matrix.</p>
+
+<ul>
+<li>The <strong>scalar multiple</strong> $$$cA$$$ is the <em>m x n</em> matrix whose entries are <em>c</em> times the corresponding entries of <em>A</em>; $$$cA$$$ is the <em>m x n</em> matrix whose $$$(i,j)$$$-entry is $$$ca_{ij}$$$. (-1)A is -A and 0A is denoted by <em>O</em>, the <strong>zero matrix</strong>, where each entry is 0.</li>
+</ul>
+
+
+<h4>Properties of Matrix Addition and Scalar Multiplication (Theorem 1.1):</h4>
+
+<p>Let A, B, and C be <em>m x n</em> matrices, and let <em>s</em> and <em>t</em> be any scalars. Then:</p>
+
+<ol>
+<li>$$$A+B = B+A$$$</li>
+<li>$$$A+(B+C)=(A+B)+C$$$</li>
+<li>$$$A+0\text{ [zero matrix]} = A$$$</li>
+<li>$$$A + (-A) = 0$$$</li>
+<li>$$$(st)A = s(tA)$$$</li>
+<li>$$$s(A+B) = sA + sB$$$</li>
+<li>$$$(s+t)A = sA + tA$$$</li>
+</ol>
+
+
+<p>Proof of 7:
+1. $$$[(s+t)A]_{ij} = sA_{ij} + tA_{ij} = [sA]_{ij} + [tA]_{ij}$$$</p>
+
+<hr />
+
+<h3>1/27/14</h3>
+
+<h3>Transpose</h3>
+
+<ul>
+<li>The <strong>transpose</strong> of an <em>m x n</em> matrix <em>A</em> is the <em>n x m</em> matrix denoted by $$$A^T$$$ whose $$$(i,j)$$$-entry is the $$$(j,i)$$$-entry of <em>A</em>:
+\[\begin{align}
+&amp;A=(a_{ij}) \\
+&amp;A^T=(a_{ji}) \\
+\end{align} \]</li>
+<li>If we take a real number to be a $$$1\times 1$$$ matrix, then its transpose is itself</li>
+</ul>
+
+
+<h4>Properties of Transpose (Thm 1.2):</h4>
+
+<p>Suppose A, B are $$$n\times m$$$ matrices, and $$$s\in\mathbb{R}$$$</p>
+
+<ol>
+<li>$$$(A+B)^T = A^T + B^T$$$</li>
+<li>$$$(sA)^T = sA^T$$$</li>
+<li>$$$(A^T)^T = A$$$</li>
+</ol>
+
+
+<h3>Vectors</h3>
+
+<ul>
+<li>A matrix $$$\mathbf u$$$ that has exactly one row is a <strong>row vector</strong>; likewise with columns.
+
+<ul>
+<li>Usually be dealing with <strong>column vectors</strong>.</li>
+</ul>
+</li>
+<li>Vectors are denoted with boldface; <strong>u</strong> and <strong>v</strong> or $$$\vec u$$$ and $$$\vec v$$$</li>
+<li>The set of all column vectors with <em>n</em> components is written as $$$\mathbb R^n$$$</li>
+<li>Vector entries are called <strong>components</strong>
+
+<ul>
+<li>Vectors have both <em>magnitude and direction</em></li>
+</ul>
+</li>
+<li></li>
+<li>You can add and multiply vectors by scalars.
+
+<ul>
+<li>These operations are <strong>vector addition</strong> and <em>scalar multiplication</em></li>
+</ul>
+</li>
+<li><p><strong>0</strong> is the <strong>zero vector</strong>, which obeys the following rules:
+\[ \begin{align}
+\mathbf u + \mathbf 0 &amp;= \mathbf u \\
+0\mathbf u &amp;= \mathbf 0 \\
+\forall \mathbf u &amp;\in \mathbb R^ n
+\end{align} \]</p></li>
+<li><p>For any <em>m x n</em> matrix $$$A$$$, its <em>jth</em> column is $$\mathbf a_ j = \begin{bmatrix} a_{1j} \\  a_{2j} \\ \vdots \\  a_{mj} \end{bmatrix}$$</p></li>
+<li>Vectors can also be represented geometrically as directed line segments/arrows
+
+<ul>
+<li>If $$$\mathbf v = \begin{bmatrix} a \\ b \\ \end{bmatrix}$$$ is a vector in $$$\mathbb R^2$$$ you can represent it as an arrow from the origin to the point $$$(a,b)$$$ in the $$$xy$$$-plane [insert graph thing in your mind]</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>Linear Combinations</h3>
+
+<ul>
+<li><strong>Definition:</strong> Let $$$\vec u_1, \dotsc , \vec u_n \;\;\text{in}\;\; \mathbb{R}^m$$$ (set of all $$$m\times 1$$$ matrices with real number entries)
+
+<ul>
+<li>A <em>linear combination</em> of $$${\vec u_1, \dotsc ,\vec u_n}$$$ is a vector $$$\vec u \;\;\text{in}\;\;\mathbb{R}^m$$$ which is of the form
+$$\vec u = c_1\vec u_1 + c_2\vec u_2 + \dotso + c_n\vec u_n$$
+where $$$c_i$$$ is a scalar.</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Examples</h4>
+
+<ol>
+<li>$$$\vec O$$$ is a linear combination of any collection of vectors $$\vec O = o*\vec u_1 + \dotso + o*\vec u_n$$</li>
+<li>$$$\vec u_1 = 1*\vec u_2 + o*\vec u_2 + \dotso + o*\vec u_n$$$ <br><br></li>
+<li>Is $$$\begin{bmatrix} 1 \\ 2 \\ 3\\ \end{bmatrix}$$$ a linear comb. of $$$\begin{bmatrix} 1 \\ 0 \\ 3 \\ \end{bmatrix}\;\;\text{and}\;\;\begin{bmatrix} -1 \\ 1 \\ 3 \\ \end{bmatrix}$$$?<br><br>
+
+<ul>
+<li>i.e. are there weights $$$x_1, x_2,$$$ where $$x_1\begin{bmatrix} 1\\0\\3\\ \end{bmatrix} + x_2 \begin{bmatrix} -1 \\ 1 \\ 3 \\ \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \\ 3\\ \end{bmatrix}$$</li>
+<li>i.e. are there solutions to this:
+\[\begin{aligned}
+x_1 - x_2 = 1 \\
+0 + x_2 = 2 \\
+3x_1 + 3x_2 = 3 \\
+x_2 = 2 \\
+x_1 = 3 \\
+\end{aligned}\]</li>
+</ul>
+
+
+<p> \[\begin{aligned}
+ \let \vec w_1 &amp;= s\vec u + t\vec v \\
+ \vec w_2 &amp;= p\vec u + q\vec v \\
+ \therefore\vec w_1 + \vec w_2 &amp;= (s+p)\vec u + (t + q)\vec v \\
+ \end{aligned}\]</p></li>
+</ol>
+
+
+<h3>Standard Vectors</h3>
+
+<ul>
+<li>The <strong>standard vectors</strong> of $$$\mathbb R^n$$$ are $$\begin{bmatrix}1 \\ 0 \\ \vdots \\ 0 \end{bmatrix}, \begin{bmatrix}0 \\ 1 \\ \vdots \\ 0\end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1\end{bmatrix}$$</li>
+</ul>
+
+
+<hr />
+
+<ul>
+<li>One question asked in two different ways:
+
+<ul>
+<li>Does the system have a solution?</li>
+<li>Is the RHS a linear combination of the <em>columns</em> of the coefficient matrix?</li>
+</ul>
+</li>
+<li><strong>Definition:</strong> $$$\mathbf{A} =[\vec a_1, \dotsc , \vec a_n]$$$,
+
+<ul>
+<li>Matrix-vector product
+\[\begin{aligned}
+&amp;\begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ \end {bmatrix} \begin{bmatrix}7\\8\\9\\ \end{bmatrix} = 7\begin{bmatrix}1\\4\\ \end{bmatrix} + 8\begin{bmatrix}2\\5\\ \end{bmatrix} + 9\begin{bmatrix}3\\6\\ \end{bmatrix} \\
+&amp;\mathbf{A} \bullet \vec x= x_1\vec a_1 + x_2\vec a_2 + \dotso + x_n\vec a_n \\
+\end{aligned} \]</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Rotations</h4>
+
+<ul>
+<li>What's $$$\mathbf {A_\theta}$$$?
+
+<ul>
+<li>An $$$n\times n$$$ matrix such that $$$\mathbf A_\theta\vec u = \vec v$$$
+$$\mathbf A_\theta = \begin{bmatrix} \cos\theta &amp; -\sin\theta \\ \sin\theta &amp; \cos\theta\end{bmatrix}$$</li>
+</ul>
+</li>
+<li>insert complicated graph and trig here</li>
+</ul>
+
+
+<h4>Thm 1.3</h4>
+
+<p>Suppose $$$A, B = m\times n$$$ matrices and $$$\vec u,\vec v\in \mathbb R^n$$$:</p>
+
+<ol>
+<li>$$$A(\vec u + \vec v) = A\vec u + A\vec v$$$</li>
+<li>$$$A(c\vec u) = cA\vec u$$$</li>
+<li>$$$(A + B)\vec u = A\vec u + B\vec u$$$</li>
+<li>$$$A\vec e_i = \vec a_i, A=[\vec a_1, \vec a_2,\cdots \vec a_n]$$$</li>
+<li>$$$\text{If } A\vec w=B\vec w \;\forall \vec w \in\mathbb R^n \therefore A = B$$$</li>
+</ol>
+
+
+<h3>Sect. 1.3</h3>
+
+<h4>Elementary Row Ops/ Row Echelon Form</h4>
+
+<p>Ex:
+\[\begin{aligned}
+&amp;2x + 4y - 2z = 2 \\
+&amp;4x + 9y - 3z = 8 \\
+-&amp;2x - 3y + 7z = 10 \\
+\end{aligned} \]</p>
+
+<p>Ex:
+\[\begin{aligned}
+x + 2y - z = 1 \\
+ y + z = 4 \\
+z = 2 \\
+\end{aligned} \]</p>
+
+<ul>
+<li>Make into augmented matrix in <em>row echelon form</em></li>
+<li>can be solved by "back substitution"
+\begin{bmatrix}
+2 &amp; 4 &amp; -2 &amp;| &amp;2 \\
+4 &amp; 9 &amp; -3 &amp;| &amp;8 \\
+-2 &amp; -3 &amp; 7 &amp;| &amp;10 \\
+\end{bmatrix}</li>
+</ul>
+
+
+<p>\[ \begin{aligned}
+&amp;r_1 + r_3 \to r_3 \\
+&amp;r_2 + (-2)r_1 \to r_2 \\
+\end{aligned} \]</p>
+
+<p>\begin{bmatrix}
+2 &amp; 4 &amp; -2 &amp;| &amp;2 \\
+0 &amp; 1 &amp; 1 &amp;| &amp;4 \\
+0 &amp; 1 &amp; 5 &amp;| &amp;12 \\
+\end{bmatrix}</p>
+
+<hr />
+
+<h3>Text. Sect. 1.2</h3>
+
+<h2><span id="anchor1.2">Linear combinations</span></h2>
+
+<ul>
+<li>A <strong>linear combination</strong> of vectors $$$\mathbf u_1, \mathbf u_2, \dotsc,\mathbf u_k$$$ is a vector of the form $$c_1\mathbf u_1 + c_2\mathbf u_2 + \dotso + c_k\mathbf u_k$$ where $$$c_1, c_2, \dotsc, c_k$$$ are scalars. These are called the <strong>coefficients</strong> of the linear combination.</li>
+</ul>
+
+
+<h3>Matrix-Vector Products</h3>
+
+<ul>
+<li><p>A <strong>matrix-vector product</strong> is the product of $$$m \times n$$$ matrix $$$A$$$ and $$$n \times 1$$$ vector <strong>v</strong>. $$$A\mathbf v$$$ is the linear combination of the columns of $$$A$$$ whose coefficients are the corresponding components of <strong>v</strong>. $$A\mathbf v = v_1\mathbf a_1+v_2\mathbf a_2+\dotso + v_n\mathbf a_n$$</p></li>
+<li><p>A matrix with nonnegative entries that sum to one is called a <strong>stochastic matrix</strong></p></li>
+</ul>
+
+
+<h4>Identity Matrices</h4>
+
+<ul>
+<li>For each positive integer $$$n$$$ the $$$n\times n\textbf{ identity matrix }I_n\text{ is the } n\times n$$$ matrix whose respective columns are the standard vectors $$$\mathbf e_1, \mathbf e_2, \dotsc,\mathbf e_n\text{ in } \mathbb R^n$$$</li>
+</ul>
+
+
+<hr />
+
+<h3>Text. $$$\S$$$ 1.3</h3>
+
+<h2>Systems of Linear Equations</h2>
+
+<ul>
+<li>A <strong>linear equation</strong> is an equation that can be written in the form $$a_1x_1 + a_2x_2 + \dotso + a_nx_n = b$$ where $$$a_1,a_2,\dotsc,a_n, b\in \mathbb R$$$.</li>
+<li>A <strong>system of linear equations</strong> is a set of <em>m</em> linear equations in the same <em>n</em> variables, where <em>m</em> and <em>n</em> are positive integers. This can be written in the following:</li>
+</ul>
+
+
+<p>\[\begin{aligned}
+a_{11}x_1+a_{12}x_2+&amp;\dotso+a_{1n}x_n = b_1 \\
+a_{21}x_1 + a_{22}x_2+&amp;\dotso+a_{2n}x_n = b_2 \\
+&amp;\vdots \\
+a_{m1}x_{2} + a_{m2}x_2+&amp;\dotso + a_{mn}x_n = b_m \\
+\end{aligned}\]</p>
+
+<ul>
+<li><p>$$\mathrm{span}(v_1,v_2,\dotsc,v_n) = \{c_1v_1 + c_2v_2 + \dotso c_nv_n\;|\;c_i\in\mathbb R\text{ for }1\leq i\leq n\}$$</p></li>
+</ul>
+
+
+<hr />
+
+<h3>7/9/14</h3>
+
+<p>The <strong>augmented matrix</strong> associated with the equation $$$A\vec x=\vec b$$$, is the matrix $$$[\vec a_1, \vec a_2 \cdots \vec a_n \vec b]$$$</p>
+
+<p><strong>Ex:</strong>
+\[\begin{aligned}
+x_1 - 2x_2 - x_3 = 3 \\
+3x_1 - 6x_2 - 5x_3 = 3 \\
+2x_1 - x_2 + x_3 = 0 \\
+\end{aligned}\]
+put into <em>augmented matrix</em> form:
+\[\begin{bmatrix}
+1 &amp; -2 &amp; -1 &amp; 3 \\
+3 &amp; -6 &amp; -5 &amp; 3 \\
+2 &amp; -1 &amp; 1 &amp; 0 \\
+\end{bmatrix}\]</p>
+
+<p>$$r_2-3r_1\to r_2$$</p>
+
+<p>\begin{bmatrix}
+1 &amp; -2 &amp; -1 &amp; 3 \\
+0 &amp; 0 &amp; -2 &amp; -6 \\
+2 &amp; -1 &amp; 1 &amp; 0 \\
+\end{bmatrix}</p>
+
+<p>$$r_3 - 2r_1 \to r_3$$</p>
+
+<p>\begin{bmatrix}
+1 &amp; -2 &amp; -1 &amp; 3 \\
+0 &amp; 0 &amp; -2 &amp; -6 \\
+0 &amp; 3 &amp; 3 &amp; -6 \\
+\end{bmatrix}</p>
+
+<p>$${1\over 3}r_3\to r_3$$</p>
+
+<p>\begin{bmatrix}
+1 &amp; -2 &amp; -1 &amp; 3 \\
+0 &amp; 0 &amp; -2 &amp; -6 \\
+0 &amp; 1 &amp; 1 &amp; -2 \\
+\end{bmatrix}</p>
+
+<p>$$ r_3 \leftrightarrow r_2$$</p>
+
+<p>\begin{bmatrix}
+1 &amp; -2 &amp; -1 &amp; 3 \\
+0 &amp; 1 &amp; 1 &amp; -2 \\
+0 &amp; 0 &amp; -2 &amp; -6 \\
+\end{bmatrix}</p>
+
+<p>$${r_3\over -2}\to r_3$$</p>
+
+<p>\begin{bmatrix}
+1 &amp; -2 &amp; -1 &amp; 3 \\
+0 &amp; 1 &amp; 1 &amp; -2 \\
+0 &amp; 0 &amp; 1 &amp; 3 \\
+\end{bmatrix}</p>
+
+<h4>Thm 1.4</h4>
+
+<p>Every matrix can be transformed into one and only one matrix in rref by means of elementary row operations.</p>
+
+<p><strong>Procedure:</strong> Given a system of linear equations,:</p>
+
+<ol>
+<li>Write the augmented matrix $$$\begin{bmatrix} A &amp; \mathbf b \end{bmatrix}$$$</li>
+<li>By iterating elementary row operations, ensure that subsequent augmented matrices adhere to criteria for rref</li>
+<li><p>You will end up with a matrix $$$\begin{bmatrix}R &amp; \mathbf c\end{bmatrix}$$$. If this matrix has a row with entries that are all 0 <em>except</em> for the last entry, the system of equations is <em>inconsistent</em>. Otherwirse, the system has at least one solution.</p></li>
+<li><p>Variables that are not <em>free</em> are <strong>basic variables</strong></p></li>
+</ol>
+
+
+<hr />
+
+<h2>$$$\S$$$ 1.4 - <span id="anchor1.4">Gaussian Elimination</span></h2>
+
+<p>Suppose that $$$R$$$ is the rref of a matrix $$$A$$$. The first nonzero entry in a row is the <strong>leading entry</strong> of that row. the $$$(i,j)$$$ position in $$$R$$$, containing one of the leading entries is called a <strong>pivot position</strong>. A column that contains a pivot position, is called a <strong>pivot column</strong>.</p>
+
+<h3>Gaussian Elimination</h3>
+
+<p>Forwards pass:</p>
+
+<ol>
+<li>Find pivot column, and row swap until you have a nonzero entry in that pivot position.</li>
+<li>Zero out all entries in pivot column below pivot position.</li>
+<li>Ignore previous row and repeat steps 1-2 for all subsequent rows.</li>
+</ol>
+
+
+<p>Backwards pass:</p>
+
+<ol>
+<li>Find bottom row, and zero out all entries above pivot position</li>
+<li>Ignore previous row, and continue upwards repeating step 1 for all subsequent rows.</li>
+</ol>
+
+
+<h4><span id="anchor1.41">Rank and Nullity</span></h4>
+
+<p>Let $$$R$$$ be the rref of matrix $$$A$$$. The <strong>rank</strong> of $$$A$$$ is the number of nonzero rows in $$$R$$$. The <strong>nullity</strong> of $$$A$$$ is defined to be the number of columns minus the <em>rank</em>.</p>
+
+<ol>
+<li>The rank of $$$A$$$ = # of pivot columns in $$$R$$$</li>
+<li>Nullity of $$$A$$$ = # of non-pivot columns in $$$R$$$.
+
+<ul>
+<li>Adding zero rows will not change <em>rank</em> or <em>nullity</em></li>
+</ul>
+</li>
+<li><p>If $$$A$$$ has <strong>full rank</strong> (<em>rank</em> is equal to total number of columns), and is square, $$$\Rightarrow R = I_n$$$</p></li>
+<li><p>If $$$A\mathbf x = \mathbf b$$$ is consistent:</p>
+
+<ul>
+<li># of basic variables = rank</li>
+<li># free variables = nullity</li>
+</ul>
+</li>
+</ol>
+
+
+<p>Consider the following:
+\begin{aligned}
+&amp;x_1 + x_2 + &amp;x_3 &amp;= 1 \\
+&amp;x_1 + &amp;3x_3 &amp;= -2+s \\
+&amp;x_1 - x_2 + &amp;rx_3 &amp;= 3 \\
+\end{aligned}</p>
+
+<p>Rewrite as $$$A\mathbf x = \mathbf b$$$
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; 1 \\
+1 &amp; 0 &amp; 3 &amp; (-2+s) \\
+1 &amp; -1 &amp; r &amp; 3 \\
+\end{bmatrix}</p>
+
+<p>Perform <em>Gaussian elimination</em></p>
+
+<p>$$r_2\leftrightarrow r_3$$</p>
+
+<p>\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; 1 \\
+1 &amp; -1 &amp; r &amp; 3 \\
+1 &amp; 0 &amp; 3 &amp; (-2+s) \\
+\end{bmatrix}</p>
+
+<p>\begin{aligned}
+r_2 - r_1\to r_2 \\
+r_3 - r_1\to r_3 \\
+\end{aligned}</p>
+
+<p>\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; 1 \\
+0 &amp; -2 &amp; (r-1) &amp; 2 \\
+0 &amp; -1 &amp; 2 &amp; (-3+s) \\
+\end{bmatrix}</p>
+
+<p>$$r_2\leftrightarrow r_3$$</p>
+
+<p>\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; 1 \\
+0 &amp; -1 &amp; 2 &amp; (-3+s) \\
+0 &amp; -2 &amp; (r-1) &amp; 2 \\
+\end{bmatrix}</p>
+
+<p>$$r_3 - 2r_2\to r_3$$
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; 1 \\
+0 &amp; -1 &amp; 2 &amp; (-3+s) \\
+0 &amp; 0 &amp; (r-5) &amp; 8-2s \\
+\end{bmatrix}</p>
+
+<p>Three cases:</p>
+
+<p>If $$$r=5,s=4$$$:
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; 1 \\
+0 &amp; -1 &amp; 2 &amp; (-3+s) \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+\end{bmatrix}
+Infinitely many solutions, 3 unknowns for 2 equations.</p>
+
+<p>If $$$r=5,s\neq 4$$$:
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; 1 \\
+0 &amp; -1 &amp; 2 &amp; (-3+s) \\
+0 &amp; 0 &amp; 0 &amp; (8-2s) \\
+\end{bmatrix}
+No solution.</p>
+
+<p>If $$$r\neq 5$$$:
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; 1 \\
+0 &amp; -1 &amp; 2 &amp; (-3+s) \\
+0 &amp; 0 &amp; 1 &amp; {8-2s\over r-5} \\
+\end{bmatrix}
+$$\vdots$$
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; ? \\
+0 &amp; 1 &amp; 0 &amp; ? \\
+0 &amp; 0 &amp; 1 &amp; ? \\
+\end{bmatrix}
+One unique solution.</p>
+
+<h4>Thm 1.5</h4>
+
+<p>The following are equivalent:</p>
+
+<ol>
+<li>The equation $$$A\mathbf x = \mathbf b$$$ is consistent (has at least one solution)</li>
+<li>The vector $$$\mathbf b$$$ is a linear combination of the columns of $$$A$$$.</li>
+<li>The <em>rref</em> of $$$A$$$ has no row of the form $$$\begin{bmatrix}0 &amp; 0 &amp; 0 &amp; \dots &amp; 0 &amp; d\end{bmatrix},\; d\neq 0$$$.</li>
+</ol>
+
+
+<hr />
+
+<h3>7/11/14</h3>
+
+<h2>$$$\S$$$ 1.7 - <span id="anchor1.7">Linear Independence</span></h2>
+
+<p><strong>Definition:</strong> A matrix $$$A = \{\vec u_1, \vec u_2, \dotsc , \vec u_k\}$$$ is <strong>linearly dependent</strong> iff $$$A\mathbf x = \mathbf 0$$$</p>
+
+<p>When determining linear independency, solve the matrix equation $$$A\mathbf x = \mathbf 0$$$.</p>
+
+<p>Let $$$A$$$ be an $$$m\times n $$$ matrix. The following are equivalent:</p>
+
+<ol>
+<li>The columns of A are <em>linearly independent</em></li>
+<li>The equation $$$A\mathbf x = \mathbf b$$$ has at <em>most</em> one solution for every $$$\mathbf b$$$.</li>
+<li>The nullity of $$$A$$$ is 0.</li>
+<li>The rank of $$$A$$$ is equal to the number of columns $$$n$$$.</li>
+<li>The columns of rref of $$$A$$$ are distinct standard vectors in $$$\mathbb R^n$$$.</li>
+<li>The only solution to $$$A\mathbf x = \mathbf 0$$$ is $$$\mathbf x = \mathbf 0$$$.</li>
+<li>There is a pivot position in each column of $$$A$$$.</li>
+</ol>
+
+
+<p>The matrix equation $$$A\mathbf x = \mathbf 0$$$ is said to be a homogeneous equation.</p>
+
+<p>$$$[A \;\;\mathbf 0] = \begin{bmatrix} 1 &amp; -4 &amp; 2 &amp; -1 &amp; 2 &amp; 0 \\ 2 &amp; -8 &amp; 3 &amp; 2 &amp; -1 &amp; 0 \end{bmatrix}$$$</p>
+
+<p>End result:
+\[\begin{bmatrix}
+4x_2 - 7x_4 + 8x_5 \\
+x_2 \\
+4x_4 - 5x_3 \\
+x_4 \\
+x_5 \\
+\end{bmatrix}\]</p>
+
+<p>$$= x_2\begin{bmatrix} 4 \\ 1 \\ 0 \\ 0 \\ 0 \end{bmatrix} + x_4\begin{bmatrix} -7 \\ 0 \\ 4 \\ 1 \\ 0 \end{bmatrix} + x_5 \begin{bmatrix} 8 \\ 0 \\ -5 \\ 0 \\ 1 \\ \end{bmatrix}$$</p>
+
+<p><strong>Fact:</strong> The set of vectors produced by Gaussian Elimination are <em>linearly independent</em></p>
+
+<h3>Thm 1.8</h3>
+
+<p>Let $$$\{\vec u_1, \dotsc,\vec u_k\}\subseteq \mathbb R^n$$$. This set of vectors is <em>linearly dependent</em> iff $$$\vec u_i = \vec 0$$$, or $$$\{\vec u_1,\dotsc,\vec u_j\}$$$ is linearly dependent. Moreover, it will be the case that $$$\vec u_j = c_1\vec u_1 + \dotso + c_{j-1} u_{j-1}$$$.</p>
+
+<ol>
+<li>A set consisting of a single vector is linearly independent only when it is a non-zero vector.</li>
+<li>A set of two vectors \{\vec u_1,\vec u_2\} is linearly dependent iff $$$\vec u_1 = \vec 0$$$ or $$$\vec u_2 = \vec 0$$$ or if $$$\vec u_1 = c\vec u_2$$$ for some $$$c\in \mathbf R^2$$$.</li>
+<li>Set $$$S=\{\vec u_1,\dotsc,\vec u_k\}$$$ be linearly independent, $$$\vec v\in \mathbb R^n$$$. If $$$\vec v \notin \mathrm{span}(S)$$$, then $$$\{\vec u_1, \dotsc, \vec u_k, \vec v\}$$$ is also linearly independent.</li>
+<li>Every subset of $$$\mathbb R^n$$$ that contains <em>strictly</em> more than $$$n$$$ vectors, is linearly dependent.</li>
+<li>If $$$S\subseteq \mathbb R^n$$$ and no vector can be removed from $$$S$$$ without altering the $$$\mathrm{span}(S)$$$, then $$$S$$$ is linearly independent.</li>
+</ol>
+
+
+<hr />
+
+<h3>7/14/14</h3>
+
+<h2>$$$\S$$$ 2.3 - <span id="anchor2.3">Invertibility</span></h2>
+
+<p><strong>Definition:</strong> Let $$$A$$$ be an $$$n\times n$$$ matrix and suppose that $$$B$$$ is an $$$n\times n$$$ matrix that has the property $$$AB=I_n=BA$$$. Then we call $$$B$$$ the <strong>inverse</strong> of $$$A$$$.</p>
+
+<p>$$$\begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 3 \end{bmatrix}
+\begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; ½ &amp; 0 \\ 0 &amp; 0 &amp; ⅓ \end{bmatrix}
+= \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}$$$</p>
+
+<p>\[\begin{aligned}
+&amp;xr = s \\
+\implies &amp;x = r^{-1} s \\
+&amp;A\mathbf x = \mathbf b \\
+\implies &amp;BA\mathbf x = B\mathbf b \\
+\implies &amp;I_n \mathbf x = B\mathbf b \\
+\implies &amp;\mathbf x = B\mathbf b \\
+\end{aligned}\]</p>
+
+<p><strong>Fact:</strong> If $$$A$$$ has an inverse, $$$A\mathbf x = \mathbf b$$$ is consistent for all $$$\mathbf b$$$, and has exactly one solution.</p>
+
+<h4>Thm 2.1</h4>
+
+<p>The matrix inverse is unique.
+<strong>Proof:</strong> Let $$$A$$$ be an $$$n\times n$$$ matrix, and assume that $$$B, C$$$ are both inverses for $$$A$$$</p>
+
+<p>$$B=BI_n = B(AC) = (BA)C = I_n C = C$$</p>
+
+<h4>Thm 2.2</h4>
+
+<p>Let $$$A, B$$$ be $$$n\times n$$$ matrices. The following are true:</p>
+
+<ol>
+<li>If $$$A^{-1}$$$ exists, $$$A^{-1}$$$ is invertible, and its inverse $$$(A^{-1})^{-1} = A$$$</li>
+<li>If $$$A^{-1}, B^{-1}$$$ both exist, $$$(AB)^{-1} = B^{-1} A^{-1}$$$
+
+<ol>
+<li>For invertible $$$n\times n$$$ matrcies $$$A_1,\dotsc, A_k$$$ $$(A_1 A_2\dotso A_k)^{-1} = A_k^{-1} A_{k-1}^{-1}\dotso A_1^{-1}$$</li>
+</ol>
+</li>
+<li>$$$(A^{-1})^T = (A^T)^{-1}$$$, should $$$A^{-1}$$$ exist.</li>
+</ol>
+
+
+<h3>Elementary Matrices</h3>
+
+<ol>
+<li>$$$P_{i,j}$$$ is the elementary matrix obtained by swapping rows $$$i$$$ and $$$j$$$ in the identity matrix.</li>
+<li>$$$S_{r,i}$$$ is the elementary matrix obtained by scaling the $$$i^{th}$$$ row of the identity matrix by $$$r$$$.</li>
+<li>$$$A_{i,j}$$$ is the elementary matrix obtained by placing an extra 1 in the $$$(i,j)^{th}$$$ position of the identity matrix, where $$$i\neq j$$$. This is equivalent to row $$$i$$$ plus row $$$j$$$ being stored in row $$$i$$$.</li>
+</ol>
+
+
+<p><strong>Claim:</strong> There exist $$$e_1, e_2, \dotso, e_k$$$ of elementary matrices, such that $$$e_k, e_{k-1}, \dotso , e_1 A=R$$$  where $$$R$$$ is the rref of $$$A$$$. There is a <em>single</em> invertible matrix $$$P$$$ such that $$$PA=R$$$.</p>
+
+<h4>Column Correspondence Property</h4>
+
+<p>Given an $$$m\times n$$$ matrix $$$A$$$, Compute $$$R$$$.
+If $$$\mathbf r_j$$$ is a linear combination of some other set of columns, $$$\{\mathbf r_l\}$$$, with scalars $$$\{c_l\}$$$, then $$$\mathbf a_j$$$ is a linear combination of $$$\{\mathbf a_l\}$$$ with scalars $$$\{c_l\}$$$.</p>
+
+<h4>Thm 2.4</h4>
+
+<p>The following statements are true:</p>
+
+<ol>
+<li>the pivot columns of any matrix $$$A$$$ are linearly independent.</li>
+<li>Each non-pivot columns of $$$A$$$ is a linear combination of the previous pivot columns of $$$A$$$, where the entries (in rref) are the scalars associated with the linear combination.</li>
+</ol>
+
+
+<hr />
+
+<h3>7/16/14</h3>
+
+<h2>$$$\S$$$ <span id="anchor2.4">2.4 - Inverses</span></h2>
+
+<h4>Thm 2.5</h4>
+
+<p>Let $$$A$$$ be a $$$n\times n$$$ matrix. Then $$$A$$$ is invertible iff the rref of $$$A$$$ is $$$I_n$$$.</p>
+
+<h5>Algorithm for building an Inverse:</h5>
+
+<p>Before: $$$A\mathbf x = \mathbf b$$$, solve for $$$\mathbf x$$$.
+Now: $$$AB=I_n$$$, solve for $$$B$$$:</p>
+
+<ul>
+<li>Consider $$$\begin{bmatrix} A &amp; \mid &amp; I \end{bmatrix}$$$</li>
+<li>Apply Gaussian elimination, find $$$\begin{bmatrix} R &amp; \mid &amp; B \end{bmatrix}$$$, where $$$R=\mathrm{rref}(A)$$$, and $$$B$$$ is some matrix.</li>
+</ul>
+
+
+<h3>Thm 2.6</h3>
+
+<p>Let $$$A$$$ be an $$$n\times n$$$ matrix. The following are equivalent.</p>
+
+<ol>
+<li>$$$A$$$ is invertible</li>
+<li>$$$\mathrm{rref}(A)$$$ = $$$I_n$$$</li>
+<li>rank$$$(A)=n$$$ (full rank)</li>
+<li>span of the columns of $$$A$$$ is all of $$$\mathbb R^n$$$</li>
+<li>$$$A\mathbf x = \mathbf b$$$ is consistent $$$\forall\mathbf b\in \mathbb R^n$$$</li>
+<li>nullity$$$(A)=0$$$</li>
+<li>There is some $$$n\times n$$$ matrix $$$B$$$, $$$\ni AB=I_n$$$</li>
+<li>There is an $$$n\times n$$$ matrix $$$C\ni C=I_n$$$</li>
+<li>The columns of $$$A$$$ are linearly independent</li>
+<li>The only solution of $$$A\mathbf x = \mathbf 0$$$ is $$$\mathbf x = \mathbf 0$$$</li>
+<li>$$$A=\{E_k E_{k-1} \dotso E_2 E_1\}$$$ where each $$$E_j$$$ is an elementary matrix.</li>
+</ol>
+
+
+<hr />
+
+<h3>7/18/14</h3>
+
+<h2>$$$\S$$$ 2.5 - Block Multiplication</h2>
+
+<p>Suppose we wanted to calculate $$$A^2$$$ for $$A = \begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+6 &amp; 8 &amp; 5 &amp; 0 \\
+-7 &amp; 9 &amp; 0 &amp; 5 \\
+\end{bmatrix}$$
+If we wanted to do this with matrix multiplication it would be very tedious and cumbersome. However, we can partition the matrix into blocks and make the task much easier:</p>
+
+<p>\[\begin{align}
+A &amp;= \begin{bmatrix}
+1 &amp; 0 &amp; \mid &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; \mid &amp; 0 &amp; 0 \\
+- &amp; - &amp; + &amp; - &amp; - \\
+6 &amp; 8 &amp; \mid &amp; 5 &amp; 0 \\
+-7 &amp; 9 &amp; \mid &amp; 0 &amp; 5 \\
+\end{bmatrix}
+= \begin{bmatrix}
+I &amp; \mid &amp; 0 \\
+- &amp; + &amp; - \\
+B &amp; \mid &amp; 5I \\
+\end{bmatrix} \\
+\\
+A^2 &amp;= \begin{bmatrix}
+I &amp; \mid &amp; 0 \\
+- &amp; + &amp; - \\
+B &amp; \mid &amp; 5I \\
+\end{bmatrix}
+\begin{bmatrix}
+I &amp; \mid &amp; 0 \\
+- &amp; + &amp; - \\
+B &amp; \mid &amp; 5I \\
+\end{bmatrix} \\
+\\
+&amp;= \begin{bmatrix}
+I^2 &amp; \mid &amp; 0 \\
+- &amp; + &amp; - \\
+6B &amp; \mid &amp; (5I)^2 \\
+\end{bmatrix}
+\end{align}\]</p>
+
+<h2>$$$\S$$$ 2.6 - LU Decomposition</h2>
+
+<hr />
+
+<h3>3/12/12</h3>
+
+<h2>$$$\S$$$ 3.1 - <span id="anchor3.1">Determinants</span></h2>
+
+<p>\[\begin{align}
+&amp;\det(A) = a_{11}c_{11} + a_{12}c_{12} +\dotso + a_{1n}c_{1n} \\
+&amp;\text{where } c_{ij} = (-1)^{i+j}\,\det\,(A_{ij}) \\
+\end{align}\]</p>
+
+<p>If $$$\det(A)\neq 0,\; A$$$ is invertible.</p>
+
+<h4>Thm 3.2</h4>
+
+<ul>
+<li>det(triangular matrix) = product of diag. entries</li>
+</ul>
+
+
+<h5>Notation:</h5>
+
+<p>$$\det(A) = \mid A\mid$$</p>
+
+<p>So let's consider $$$\{\mathbf u, \mathbf v\} \leq \mathbb R^2$$$ that are linearly independent.
+- Recall that <strong>u</strong> and <strong>v</strong> will form a parallelogram.
+- By transforming it with the rotation matrix $$$A_\theta$$$ we get an analogous set of vectors $$$\{\mathbf x, \mathbf y\} \ni \bigg(\mathbf x = \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}, \mathbf y = \begin{bmatrix} y_1 \\ 0 \end{bmatrix}\bigg)$$$. The determinant of the matrix of this set of vectors is the area of the parallelogram $$$\mathrm{Area_p} = y_1|x_2|$$$ in $$$\mathbb R^2$$$. Analogously, any n-dimensional parallelogram-like shape in n-space is called a <strong>parallelopiped</strong>.</p>
+
+<p>We can transform a $$$3\times 3$$$ matrix $$$A$$$ into an upper triangular matrix $$$U$$$. Then $$$\det(A) = \det(U)$$$.</p>
+
+<h4>Thm 3.3</h4>
+
+<p>Let $$$A$$$ be an $$$n\times n$$$ matrix. Then,</p>
+
+<ol>
+<li>If $$$B$$$ is obtained from $$$A$$$ via a row swap, $$$\det(B) = \det(A)$$$.</li>
+</ol>
+
+
+<p>Elementary row operations and det.:</p>
+
+<ol>
+<li>scaling: $$$kr_i\to r_i$$$</li>
+<li>swap: $$$r_1\leftrightarrow r_2$$$</li>
+<li>$$$kr_i + r_j\to r_j$$$</li>
+</ol>
+
+
+<p>$$\det B\text{ along row } i = \sum_{l=1}^n b_{il}c_{il} = \sum_{l=1}^n ka_{il}c_{il} = k\det A$$</p>
+
+<h4>Thm 3.4</h4>
+
+<p>Let $$$A,B$$$ be $$$n\times n$$$ matrices. Then,</p>
+
+<ol>
+<li>$$$\exists \,A^{-1} \iff \det(A)\neq 0$$$</li>
+<li>$$$\det(AB) = \det(A)\det(B)$$$</li>
+<li>$$$\det(A^T)=\det(A)$$$</li>
+<li>$$$\exists \,A^{-1} \implies \det(A^{-1}) = {1\over \det(A)}$$$</li>
+</ol>
+
+
+<p>$$$A$$$ is invertible iff $$$A=E_1E_2E_3\dotso E_k$$$
+\[\begin{align}
+\det(A) &amp;= \det(E_1\dotso E_k) \\
+&amp;= \det(E_1)\dotso \det(E_k) \\
+&amp;= r \neq 0 \\
+\end{align}\]</p>
+
+<h5>Example:</h5>
+
+<p>$$A=\begin{bmatrix} 1 &amp; -1 &amp; 2 \\ -1 &amp; 0 &amp; c \\ 2 &amp; 1 &amp; 7 \end{bmatrix}$$</p>
+
+<p>Determine values of $$$c$$$ s.t. $$$A^{-1}$$$ does <em>not</em> exist</p>
+
+<h4>Thm 3.5 (Cramer's Rule)</h4>
+
+<p>Let $$$A$$$ be an invertible $$$n\times n$$$ matrix, $$$\mathbf b\in \mathbb R^n$$$ and we define $$$M_i = [\mathbf a_1, \dotsc, \mathbf a_{i-1}, \mathbf b, \mathbf a_{i+1},\dotsc,\mathbf a_n]$$$. Consider $$$A\mathbf x = \mathbf b$$$. Then if $$$x_i={\det(M)_i\over \det(A)}$$$ the vector <strong>x</strong> represents the unique solution.
+<strong>Note:</strong> Don't use this on any matrices larger than $$$2\times 2$$$, as it requires $$$n!$$$ operations.</p>
+
+<p><strong>General Statment:</strong> After a row swap, $$$r_i\leftrightarrow r_j$$$:</p>
+
+<ul>
+<li>the signs agree iff $$$|i-j|$$$ is even</li>
+<li>$$$B_{jl}$$$ differs from $$$A_{il}$$$ by an odd number of swaps of the form $$$r_k\leftrightarrow r_{k+1} \iff |i-j|$$$ is even</li>
+</ul>
+
+
+<hr />
+
+<h3>7/25/14</h3>
+
+<h2>$$$\S$$$ 4.1 - <span id="anchor6.1">Subspaces</span></h2>
+
+<p>Suppose $$$\mathbf u, \mathbf v$$$ satisfy the homogeneous equation.
+- The set of solutions to $$$A\mathbf x = \mathbf 0$$$ is <em>closed</em> under vector addition, scalar multiplication, and contains $$$\mathbf 0$$$.</p>
+
+<p><strong>Definition:</strong> A set $$$V\subseteq \mathbb R^n$$$ is a <strong>subspace</strong> if it satisfies the following:
+1. closure under vector addition
+2. closure under scalar multiplication
+3. contains $$$\mathbf 0$$$</p>
+
+<p><strong>Ex:</strong> Show that $$$S=\{\mathbf x: A\mathbf x = 0\}$$$</p>
+
+<ol>
+<li>Closure under addition: Let $$$\mathbf u,\mathbf v \in S$$$. $$A(\mathbf u + \mathbf v) = A\mathbf u + A\mathbf v = \mathbf 0 + \mathbf 0, \mathbf u + \mathbf v \in S$$</li>
+<li>Closure under scalar multiples. Let $$$\mathbf u\in S, r\in \mathbb R$$$. $$A(r\mathbf u) = r(A\mathbf u) = r\,\mathbf 0 = \mathbf 0, r\,\mathbf u\in S$$</li>
+</ol>
+
+
+<h5>Examples of Subspaces</h5>
+
+<ol>
+<li>All of $$$\mathbb R^n$$$ (Trivial space).</li>
+<li>$$$\{\mathbf 0\}\subseteq \mathbb R^n$$$ (The zero subspace).</li>
+<li>Given $$$S=\{\mathbf v_1, \mathbf v_2,\dotsc,\mathbf v_k\}\subseteq \mathbb R^n$$$, $$$\mathrm{Span}(S)\subseteq \mathbb R^n$$$ is also a subspace.
+
+<ol>
+<li>Let $$$\mathbf u, \mathbf w\in \mathrm{Span}(S)$$$.
+\[\begin{aligned}
+\mathbf u &amp;= \sum_{i=1}^k c_i\mathbf v_i \\
+\mathbf w &amp;= \sum_{i=1}^k b_i\mathbf v_i \\
+\mathbf u + \mathbf w &amp;= \sum_{i=1}^k (b_i + c_i) \mathbf v_i \\
+\therefore \mathbf u + \mathbf v &amp;\subseteq \mathbb R^n \\
+\end{aligned}\]</li>
+<li>closed under scalar multiplication</li>
+<li>closed under inclusion of the zero vector.</li>
+</ol>
+</li>
+</ol>
+
+
+<p><strong>Definition:</strong> The <strong>nullspace</strong> of a matrix $$$A$$$ is the set of vectors that satisfy the homogeneous equation.</p>
+
+<p><strong>Defintion:</strong> The <strong>column space</strong> of a matrix $$$A$$$ is defined as
+\[\begin{align}
+\mathrm{Col}(A) &amp;= \{\mathbf b\in \mathbb R^m: A\mathbf x = \mathbf b\text{ is consistent}\} \\
+&amp;= \mathrm{span}(\{\mathbf a_1,\dotsc,\mathbf a_m\}) \\
+\end{align}\]
+which essentially is the set of all possible linear combinations of the column vectors of $$$A$$$.</p>
+
+<h2>$$$\S$$$ 4.2 - <span id="anchor4.2">Bases</span></h2>
+
+<p><strong>Definition:</strong> Let $$$V\subseteq \mathbb R^n$$$ be a non-zero subspace. A <strong>basis</strong> is a linearly independent generating set.
+- $$$\{\mathbf e_j\}$$$ (the standard vectors) form a basis for $$$\mathbb R^n$$$.</p>
+
+<h4>Thm 4.3</h4>
+
+<p>Let $$$S$$$ be a <em>finite</em> generating set for some subspace $$$V$$$. There is a subset $$$T\subseteq S$$$ which is a <em>basis</em> for $$$V$$$.</p>
+
+<p>For $$$\mathbb R^n$$$:
+1. Any generating set contains <em>at least n</em> elements.
+2. Any linearly indpendent subset contains <em>at most n</em> elements.
+3. Any basis of $$$\mathbb R^n$$$ has <em>exactly n</em> elements.</p>
+
+<h4>Thm 4.4</h4>
+
+<p>Let $$$S$$$ be a linearly independent subset of some subspace $$$V\subseteq \mathbb R^n$$$. Then $$$S$$$ can be extended to a basis of $$$V$$$.
+<strong>Proof:</strong></p>
+
+<ul>
+<li>$$$S=\{\mathbf u_1,\dotsc, \mathbf u_k\}$$$</li>
+<li>$$$V \ \mathrm{span}(S)\neq \emptyset$$$ provided that $$$S$$$ is not a basis.</li>
+<li>Let $$$\mathbf v\in V \ \mathrm{span}(S)$$$.</li>
+<li>By previous thm, $$$\{\mathbf u_1,\dotsc,\mathbf u_k,\mathbf v\}$$$ is also linearly independent.</li>
+</ul>
+
+
+<h4>Thm 4.5</h4>
+
+<p>Let $$$V\subseteq \mathbb R^n $$$ be a nonzero subspace. then any two bases have the same number of elements.
+<strong>Proof:</strong></p>
+
+<ul>
+<li>Let $$$\{\mathbf u_1, \dotsc,\mathbf u_k\}, \{\mathbf v_1,\mathbf v_p\}$$$ be two bases for $$$V$$$</li>
+<li>Define $$$A=[\mathbf u_1, \dotsc, \mathbf u_k], B=[\mathbf v_1,\dotsc, \mathbf v_p]$$$. For each $$$\mathbf v_i, A\mathbf c_i = \mathbf v_i$$$ has a solution.</li>
+<li>Define $$$C=[\mathbf c_1,\dotsc,\mathbf c_p]. C$$$ is a $$$k\times p$$$ matrix.</li>
+<li>$$$AC=B$$$</li>
+<li>$$$B\mathbf x = AC\mathbf x = \mathbf 0$$$</li>
+<li>$$$\forall \mathbf x\in \mathrm{Null}(C) = \{\mathbf 0\}$$$</li>
+<li>Therefore, the columns of $$$C$$$ are LI. $$$\therefore p\leq k$$$.</li>
+<li>By a symmetric argument, $$$k\leq p$$$.</li>
+</ul>
+
+
+<p><strong>Definition:</strong> The <strong>dimension</strong> of a subspace is the size of one of its bases.</p>
+
+<h2>$$$\S$$$ 4.3 - Dimension</h2>
+
+<ul>
+<li>Col(A) is a subspace. What is its dimension?
+
+<ul>
+<li>rank(A).</li>
+</ul>
+</li>
+<li>Null(A) is a subspace. What is its dimension?
+
+<ul>
+<li>nullity(A)</li>
+</ul>
+</li>
+</ul>
+
+
+<p><strong>Definition:</strong> $$$\mathrm{Row}(A) = \{\mathbf yA:\mathbf y\in \mathbb R^m\}$$$
+- The dimension of the row space is the # of nonzero rows of the rref.
+- The basis of the row space will be the nonzero rows of the rref.</p>
+
+<p>$$W\subseteq V\subseteq \mathbb R^n$$
+- $$$W$$$ is a subspace of $$$V$$$
+- $$$V$$$ is a subspace of $$$\mathbb R^n$$$
+- $$$\mathrm{dim}(W)\leq \mathrm{dim}(V)$$$
+- If $$$\dim(w)=\dim(V), W=V$$$</p>
+
+<hr />
+
+<h3>7/28/14</h3>
+
+<h2>$$$\S$$$ 5.1 - <span id="anchor5">Eigen-things</span></h2>
+
+<p><strong>Definition:</strong> Let $$$A$$$ be an $$$n\times n$$$ matrix, $$$\lambda$$$ be some <em>nonzero</em> scalar, $$$\mathbf v$$$ be some <em>nonzero</em> vector in $$$\mathbb R^n$$$. If $$$A\mathbf v = \lambda\mathbf v$$$, we call $$$\lambda$$$ and $$$\mathbf v$$$ an <strong>eigenvalue, eigenvector</strong> pair.</p>
+
+<p><strong>Ex:</strong></p>
+
+<p>$$B=\begin{bmatrix}3 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 2 \\ 0 &amp; 2 &amp; 1 \\ \end{bmatrix}$$</p>
+
+<p>Problem: Find a basis for the subspace of vectors with eigenvalue 3.</p>
+
+<p>$$\left[B - \lambda I: \lambda = 3\right] = \begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; \\ 0 &amp; -2 &amp; 2 \\ 0 &amp; 2 &amp; -2 \\ \end{bmatrix} = \begin{bmatrix} 0 &amp; 1 &amp; - 1 \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \\ \end{bmatrix}$$</p>
+
+<p>A basis for the 3-eigenspace is $$$\left\{\,\begin{bmatrix} 1 \\ 0 \\ 0 \\ \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 1 \\ \end{bmatrix}\,\right\}$$$</p>
+
+<p><strong>Definition:</strong> The subspace of vectors assoc. with the solution $$$(A-\lambda I)\mathbf v = \mathbf 0$$$ is called the <strong>$$$\lambda$$$-eigenspace</strong>.</p>
+
+<h2>$$$\S$$$ 5.2 - <span id="anchor5.2">Characteristic Polynomial</span></h2>
+
+<ul>
+<li>Consider $$$\det (A-\lambda I)=0$$$ for some $$$n\times n$$$ matrix $$$A$$$ and nonzero scalar $$$\lambda$$$.
+
+<ul>
+<li>The eigenvalues of $$$A$$$ are precisely those that satifsy the above equation.</li>
+</ul>
+</li>
+<li>So what is $$$\det (A-\lambda I)$$$ as a function of $$$\lambda$$$?
+
+<ul>
+<li>It's a polynomial of degree $$$n$$$!</li>
+</ul>
+</li>
+</ul>
+
+
+<p><strong>Ex:</strong></p>
+
+<p>\[\begin{aligned}
+A\, &amp;= \begin{bmatrix}-4 &amp; -3 \\ 3 &amp; 6 \end{bmatrix} \\
+A - \lambda I \;&amp;= \begin{bmatrix} -4-\lambda &amp; -3 \\ 3 &amp; 6-\lambda \end{bmatrix} \\
+\det(A-\lambda I)\;&amp;= (4-\lambda)(6-\lambda) - -3(3) \\
+&amp;= -24 -2\lambda + \lambda^2 + 9 \\
+&amp;= \lambda^2 - 2\lambda - 15 = 0 \\
+&amp;= (\lambda - 5)(\lambda + 3) &amp;= 0 \\
+\lambda \;&amp;= -3, 5 \\
+\text{Solve for the general solutions of each }&amp;\lambda\text{-eigenspace to find their respective bases.} \\
+\end{aligned}\]</p>
+
+<pre><code>Imaginary eigenvalues tell you the degree of rotation of a matrix
+</code></pre>
+
+<p><strong>Definition:</strong> The eqn $$$\det(a-\lambda I) = 0$$$ is called the <strong>characteristic equation</strong>. The <strong>multiplicity</strong> (or <strong>algebraic multiplicity</strong>) of an eigenvalue is the corresponding root of the char. poly. If it exists, the $$$\dim(\lambda\text{-space})\leq\mathrm{mult}(\lambda)$$$</p>
+
+<hr />
+
+<h3>7/30/14</h3>
+
+<h2>$$$\S$$$ 5.3 - <span id="anchor5.3">Diagonalization of Matrices</span></h2>
+
+<h4>Thm 5.2</h4>
+
+<ul>
+<li>An $$$n\times n$$$ matrix $$$A$$$ is <strong>diagonizable</strong> iff there is a basis for $$$\mathbb R^n$$$ consisting entirely of eigenvectors.</li>
+<li>Furthermore, if $$$A=PDP^{-1}$$$, then the columns of $$$P$$$ are the elements of the basis of eigenvectors, and the entries of $$$D$$$ are the corresponding eigenvalues.</li>
+</ul>
+
+
+<p><strong>Proof:</strong> Suppose that $$$A$$$ is diagonizable. $$$A=PDP^{-1}$$$ Since $$$P$$$ is invertible, its columns form a basis for $$$\mathbb R^n$$$. Consider $$$AP = PD$$$.
+$$A\mathbf p_j = \lambda_j\mathbf p_j$$
+Suppose that $$$\{\mathbf p_1,\dotsc,\mathbf p_n\}$$$ is a basis of eigenvectors. Let $$$\{\lambda_1,\dotsc,\lambda_n\}$$$ be their eigenvalues,, and define $$$P$$$ and $$$D$$$ as before.</p>
+
+<h4>Thm 5.3</h4>
+
+<p>Eigenvectors with distinct eigenvalues are linearly independent.</p>
+
+<p><strong>Proof:</strong> Suppose $$$\{\mathbf v_1,\dotsc,\mathbf v_k\}$$$ eigenvectors, each of which has a distinct eigenvalue $$$\lambda_k$$$. Assume this set is linearly dependent.</p>
+
+<h5>Test for Diagonalization</h5>
+
+<p>A matrix $$$n\times n$$$ $$$A$$$ is diagonizable iff the following holds</p>
+
+<ol>
+<li>For each eigen-$$$\lambda$$$ $$$n = \mathrm{rank}(A, B)$$$</li>
+</ol>
+
+
+<hr />
+
+<h3>8/11/14</h3>
+
+<h2>$$$\S$$$ 6.1 Dot/Inner Products and their Relations</h2>
+
+<p>\[\begin{align}
+\text{dot product:}\;\mathbf u \bullet \mathbf v &amp;= \sum_1^n \mathbf u_i \mathbf v_i \\
+\text{inner product:}\;&lt;*,*>\,: &amp;V\times V\to\mathbb F \\
+&amp;\mathbb R^n \times \mathbb R^n\to \mathbb R \\
+\text{norm:}\;\mid\mid \mathbf u\mid\mid &amp;= \sum_1^n\sqrt{u_i^2} \\
+\end{align}\]</p>
+
+<h4>Thm 6.1</h4>
+
+<p>For vectors, $$$\mathbf{u\;v\;w}$$$:</p>
+
+<ol>
+<li>$$$\mid\mid \mathbf u\mid\mid = \mathbf u \bullet \mathbf u$$$</li>
+<li>$$$\mathbf u \bullet (\mathbf v + \mathbf w) = \mathbf u \bullet \mathbf v + \mathbf u \bullet \mathbf w)$$$</li>
+<li>$$$(c\,\mathbf u)\bullet \mathbf v = c(\mathbf u \bullet \mathbf v) = (c\,\mathbf v)\bullet \mathbf u$$$</li>
+<li>$$$\mid\mid c\,\mathbf u\mid\mid\; = \;\mid c\mid\, \mid\mid \mathbf u \mid\mid $$$</li>
+</ol>
+
+
+<h3>Extension of the Pythagorean Thm</h3>
+
+<p>$$$\mathbf u^2 + \mathbf v^2 = \mathbf w^2$$$</p>
+
+<h3>Cauchy-Schwarz Ineqhuality</h3>
+
+<p>$$$\mid\mathbf u \bullet \mathbf v \mid \;\leq \; \mid\mid \mathbf u \mid\mid \; \mid\mid \mathbf v \mid\mid$$$</p>
+
+<h3>Triangle Inequality</h3>
+
+<p>$$$\mid\mid \mathbf u + \mathbf v\mid\mid \;\leq\; \mid\mid \mathbf u \mid\mid + \mid\mid \mathbf v \mid\mid$$$</p>
+
+<hr />
+
+<h2>$$$\S$$$ 6.2 - Orthogonality</h2>
+
+<p><strong>Def:</strong> A set of vectors is <strong>orthogonal</strong> iff $$$\mathbf u_i \bullet \mathbf u_j = 0,\, i\neq j$$$</p>
+
+<ul>
+<li>Orthogonal sets are <em>linearly independent</em></li>
+<li>If you have an orthogonal set, you can determine a linear combination for some vector $$$\mathbf u$$$ with the following formula: $$\mathbf u = \sum_1^n {\mathbf u \bullet \mathbf v_i \over \mid\mid\mathbf v_i\mid\mid^2} \mathbf v_i$$</li>
+</ul>
+
+
+<h3>Gram-Schmidt Process</h3>
+
+<p>Let $$$\{\mathbf u_1,\dotsc,\mathbf u_k\}$$$ be a basis for a subspace $$$W$$$.</p>
+
+<p>\[\begin{align}
+\mathbf v_1 &amp;= \mathbf u_1 \\
+\mathbf v_2 &amp;= \mathbf u_2 - {\mathbf u_2 \bullet \mathbf v_1 \over \mid\mid\mathbf v_1\mid\mid^2} \mathbf v_1 \\
+\mathbf v_3 &amp;= \mathbf u_3 - {\mathbf u_3 \bullet \mathbf v_1 \over \mid\mid\mathbf v_1\mid\mid^2} \mathbf v_1 - {\mathbf u_3 \bullet \mathbf v_2 \over \mid\mid\mathbf v_2\mid\mid^2} \mathbf v_2 \\
+&amp;\vdots \\
+\mathbf v_k &amp;= \mathbf u_k - \sum_{i=1}^{k-1} {\mathbf u_k \bullet \mathbf v_i \over \mid\mid\mathbf v_i\mid\mid^2} \mathbf v_i
+\end{align}\]</p>
+
+<hr />
+
+<h2>$$$\S$$$ 6.3 - Orthogonal Projections</h2>
+
+<p>\[\begin{align}
+S^{\perp} &amp;= \{\mathbf v:\mathbf v\bullet \mathbf s_i = 0, \forall s_i\in S\} \\
+S^{\perp} &amp;= (\mathrm{span}(S))^{\perp} \\
+\end{align}\]</p>
+
+<h4>Thm 6.7</h4>
+
+<p>\[\begin{align}
+&amp;\text{Let } W\subseteq \mathbb R^n, \\
+&amp;\{\mathbf v_1,\dotso,\mathbf v_k\} \text{ be an orthonormal basis of } W \\
+&amp;\forall\mathbf u\in \mathbb R^n,\;\exists! \mathbf w \in W,\, \mathbf z\in W^{\perp},\; \ni \mathbf u = \mathbf w + \mathbf z \\
+&amp;\mathbf w = (\mathbf u\bullet \mathbf v_1)\mathbf v_1 + \dotso + (\mathbf u \bullet \mathbf v_k)\mathbf v_k) \\
+&amp;\mathbf w \text{ is the orthogonal projection of } \mathbf u \text{ onto } W \\
+\end{align}\]</p>
+
+<p><strong>Fact:</strong> $$$\dim W + \dim(W^{\perp}) = n$$$, the <em>ambient space</em> that you're working in (the $$$n$$$ of your $$$\mathbb R^n$$$.</p>
+
+<p>\[\begin{align}
+\dim(\mathrm{Col}(A)) = \mathrm{rank} \\
+\dim(\mathrm{Null}(A^T)) = m - \mathrm{rank} \\
+\end{align}\]</p>
+
+<hr />
+
+<h3>8/8/14</h3>
+
+<h2>$$$\S$$$ 6.5 Orthogonal Matrices and Operators</h2>
+
+<ul>
+<li>$$$A\mathbf e_i = \mathbf a_i$$$</li>
+<li>$$$A\mathbf x = \mathbf 0$$$</li>
+<li>$$$A\mathbf v = \lambda v$$$</li>
+<li><p>$$$\mid\mid A\mathbf v \mid\mid = \mid\mid\mathbf v\mid\mid$$$</p>
+
+<ul>
+<li><strong>Ex:</strong> In $$$\mathbb R^2\; A_\theta = \begin{bmatrix}\cos\theta &amp; \sin\theta \\ -\sin\theta &amp; \cos\theta \end{bmatrix}$$$</li>
+</ul>
+</li>
+<li><p><strong>Def:</strong> Let $$$A$$$ be an $$$n\times n$$$ matrix, and suppose $$$\mid\mid A\mathbf v \mid\mid = \mid\mid\mathbf v\mid\mid$$$ holds for all vectors $$$\mathbf v$$$. In this case, we say $$$A$$$ is an <strong>orthogonal matrix</strong>.</p></li>
+<li>Suppose $$$A$$$ is orthogonal:
+
+<ol>
+<li> $$$\mid\mid A\mathbf e_i \mid\mid = \mid\mid \mathbf a_i \mid\mid = \mid\mid \mathbf e_i\mid\mid = 1$$$</li>
+</ol>
+
+
+<p>  \[\begin{align}
+  \mid\mid \mathbf a_i + \mathbf a_j \mid\mid^2 &amp;= \mid\mid A\mathbf e_i + A \mathbf e_j\mid\mid ^2
+  &amp;= \mid\mid A(\mathbf e_i + \mathbf e_j)\mid\mid^2
+  &amp;= 2
+  &amp;= \mid\mid \mathbf e_i\mid \mid ^2 + \mid\mid \mathbf e_j \mid\mid^2   &amp;= \mid\mid \mathbf a_i\mid \mid ^2 + \mid\mid \mathbf a_j \mid\mid^2
+  \end{align}\]</p></li>
+</ul>
+
+
+<h4>Thm 6.9</h4>
+
+<p>The following are equivalent for an $$$n\times n$$$ matrix $$$A$$$:</p>
+
+<ol>
+<li>$$$A$$$ is orthogonal.</li>
+<li>$$$A^TA = I$$$
+$$$(A^{-1} = A^T)$$$</li>
+<li>$$$(A\mathbf u)\bullet (A\mathbf v) = \mathbf u\bullet \mathbf v = \, &lt;A\mathbf u, A\mathbf v >$$$</li>
+</ol>
+
+
+<h4>Thm 6.10</h4>
+
+<p>Let $$$P,Q$$$ be two orthogonal matrices</p>
+
+<ol>
+<li>$$$PQ$$$ is also orthogonal.</li>
+<li>$$$Q^{-1}$$$ is also orthogonal.</li>
+<li>$$$Q^T$$$ ""</li>
+<li>$$$\det(Q)=\pm 1$$$</li>
+</ol>
+
+
+<p><strong>Proof:</strong>
+\[\begin{align}
+1 = \det(I) &amp;= \det(QQ^T) \\
+&amp;=\det(Q)\det(Q^T) \\
+&amp;= \det(Q)^2 \\
+\implies &amp;\det(Q) =\pm 1 \\
+\end{align}\]</p>
+
+<p><strong>Fact:</strong>
+- Two reflections in a row is a a rotation.
+- A reflection followed by a rotation is some reflection.</p>
+
+<h2>$$$\S$$$ 6.6</h2>
+
+<p>Let $$$A$$$ be an $$$n\times n$$$ matrix, and suppose that it is diagonalizable. $$$A=PDP^{-1}$$$. If $$$P$$$'s columns are an orthonormal basis, then
+\[\begin{align}
+A=PDP^T \\
+A^T = (PDP^T)^T=P^{T^T}D^TP^T = PDP^T=A \\
+\therefore A\text{ is symmetric.} \\
+\end{align}\]</p>
+
+<h4>Thm 6.14</h4>
+
+<p>If $$$\mathbf u,\mathbf v$$$ are two eigenvectors of a symmetric matrix $$$A$$$ with different eigenvalues, say $$$\lambda, \mu$$$, then $$$\mathbf u \bullet \mathbf v = 0$$$.
+\[\begin{align}
+(A\mathbf u)\bullet \mathbf v &amp;= (\lambda \mathbf u) \mathbf v= \lambda(\mathbf u \bullet \mathbf v) \\
+&amp;= \mathbf u \bullet (A^T\mathbf v) \\
+&amp;= \mathbf u \bullet (A\mathbf v) \\
+&amp;= \mathbf u \bullet (\mu\mathbf v) \\
+&amp;= \mu(\mathbf u \bullet \mathbf v) \\
+\end{align}\]</p>
+
+<h4>Thm 6.15</h4>
+
+<p>An $$$n\times n$$$ matrix $$$A$$$ is symmetric, iff there is an orthonormal basis of eigenvectors of $$$A$$$ in $$$\mathbb R^n$$$, and in this case, there is an orthogonal matrix and a diagonal matrix $$$\ni A=PDP^T$$$.</p>
+</body>
+</html>
